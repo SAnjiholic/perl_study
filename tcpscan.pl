@@ -9,7 +9,7 @@ chop ($end_port = <stdin>);
 foreach ($port = $start_port ; $port <= $end_port ; $port++) 
 {
     print "\rScanning port $port";
-    $socket = IO::Socket::INET->new(PeerAddr => $target , PeerPort => $port , Proto => 'tcp' , Timeout => 0.5);
+    $socket = IO::Socket::INET->new(PeerAddr => $target , PeerPort => $port , Proto => 'tcp' , Timeout => 0.1);
     if( $socket )
     {
         print "\r = Port $port is open.\n" ;
